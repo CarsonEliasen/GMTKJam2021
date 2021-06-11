@@ -12,6 +12,9 @@ function generateLevel(level){
 	show_debug_message(rowAmount)
 	show_debug_message(colAmount)
 	makeCells(rowAmount,colAmount)
+	//Generate Rooms
+	generateChambers(level, [colAmount, rowAmount])
+	//Generate Monsters
 	//Increment Level
 	level++
 }
