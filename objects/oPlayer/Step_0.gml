@@ -1,0 +1,2 @@
+getInput()
+movePlayer()
