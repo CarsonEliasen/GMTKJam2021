@@ -1,1 +1,1 @@
-makeCells(20, 20)
+generateLevel(level)
