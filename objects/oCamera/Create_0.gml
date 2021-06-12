@@ -21,3 +21,5 @@ view_camera[0] = camera
 
 xTo = x
 yTo = y
+
+instance_create_depth(x,y,depth, oUIController)
