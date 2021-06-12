@@ -1,5 +1,5 @@
 if(edge){
-	drawBlockText("#", c_lime)
+	drawBlockText("#", c_navy)
 } else{
 	drawBlockText("#", c_white)
 }

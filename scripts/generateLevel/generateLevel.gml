@@ -5,6 +5,9 @@ function generateLevel(level){
 	randomize()
 	//Get Level Dimensions
 	var levelDims = getLevelDims(level)
+	//Set Camera Max Dims
+	oCamera.camMaxHeight = (levelDims[1]-1) * sprite_get_height(sCell)
+	oCamera.camMaxWidth  = (levelDims[0]-1) * sprite_get_height(sCell)
 	//Make Cells
 	var rowAmount = irandom_range(levelDims[0], levelDims[1])
 	var colAmount = irandom_range(levelDims[2], levelDims[3])
