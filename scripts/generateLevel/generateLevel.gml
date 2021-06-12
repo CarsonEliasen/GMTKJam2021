@@ -19,6 +19,11 @@ function generateLevel(level){
 	//GenerateCrafting
 	CraftingSpawning(levelDims)
 	//GenerateTreasure
+	//Relocate Characters
+	characterRelication(levelDims)
+	StrangerSpawning(levelDims, level)
 	//Increment Level
 	level++
+	//Return Dims
+	return levelDims
 }
