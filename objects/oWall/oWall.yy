@@ -1,10 +1,16 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "sCellEmpty",
+    "path": "sprites/sCellEmpty/sCellEmpty.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "oCellOccupier",
+    "path": "objects/oCellOccupier/oCellOccupier.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,

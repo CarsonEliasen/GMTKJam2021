@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Player",
-    "path": "folders/Scripts/Player.yy",
+    "name": "Character",
+    "path": "folders/Scripts/Character.yy",
   },
   "resourceVersion": "1.0",
-  "name": "getInput",
+  "name": "move_character",
   "tags": [],
   "resourceType": "GMScript",
 }
