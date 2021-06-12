@@ -1,0 +1,1 @@
+drawBlockText(string(character_id), c_white)

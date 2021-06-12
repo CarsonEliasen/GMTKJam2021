@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Player.yy",
   },
   "resourceVersion": "1.0",
-  "name": "getInput",
+  "name": "move_character",
   "tags": [],
   "resourceType": "GMScript",
 }
