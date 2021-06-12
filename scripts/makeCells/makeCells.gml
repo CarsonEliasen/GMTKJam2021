@@ -9,11 +9,14 @@ function makeCells(width, height){
 			var posY = col * cellWidth
 			//Create Cells
 			var cell = instance_create_depth(posX, posY, depth, oCell)
-			//If on edge of map, create a wall
-			if((row == 0 or col == 0) or (col == width-1 or row == height-1)){
-				var wall = instance_create_depth(posX, posY, depth, oWall)	
-				array_push(cell.contains, wall)
+			//Create a wall
+			var wall = instance_create_depth(posX, posY, depth, oWall)	
+			if((col == 0 or row == 0) or (row == height-1 or col == width-1)){
+				wall.edge = true	
+			} else{
+				wall.edge = false	
 			}
+			array_push(cell.contains, wall)
 		}
 	}
 }

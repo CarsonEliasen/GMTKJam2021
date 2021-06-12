@@ -1,31 +1,43 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function generateChambers(level, levelDims){
-	var numChambers = irandom_range(max(1, level/2), level*2)
-	var avgScaler = .7
-	var avgChaberSize = [levelDims[0]/numChambers * avgScaler, levelDims[1]/numChambers * avgScaler]
-	//Make Chambers
-	for(var chamber = 0; chamber < numChambers; chamber++){
-		//Gen Chamber Type
-		var chamberType = irandom(100)
-		//Decide Chamber Dims
-		var chSizeOffset = .3
-		var chamberWidth = irandom_range(avgChaberSize[0] * (1 - chSizeOffset), avgChaberSize[0] * (1 + chSizeOffset))
-		var chamberHeight = irandom_range(avgChaberSize[1] * (1 - chSizeOffset), avgChaberSize[1] * (1 + chSizeOffset))
-		//Find chamber Start
-		var chamberStartX = irandom(levelDims[0])
-		var chamberStartY = irandom(levelDims[1])
-		//Make Walls And Populate Chamber
-		for(var col = 0; col < chamberWidth; col++){
-			for(var row = 0; row < chamberHeight; row++){
-				if((row == 0 or col == 0) or (row == chamberHeight-1 or col == chamberWidth-1)){
-					var posX = (row + chamberStartX) * sprite_get_height(sCell)
-					var posY = (col + chamberStartY) * sprite_get_height(sCell)
-					if(!place_meeting(posX, posY, oWall)){
-						instance_create_depth(posX, posY, depth, oWall)
-					}
+	var numChambers = irandom_range(max(3, level), max(3, level*2))
+	var startingWalls = instance_number(oWall)
+	makeFirstChamber(levelDims, numChambers, -4, -4)
+	while(instance_number(oWall) > startingWalls * .70){
+		makeChamber(levelDims, numChambers)
+	}
+	show_debug_message("MAKING HALLS COMPLETE")
+	instance_destroy(oHall)
+	for(var i = 0; i < instance_number(oChamber); i++){
+		var connections = irandom_range(2, instance_number(oChamber)/2)
+		//var connections = irandom_range(1, 1)
+		for(var j = 0; j < connections; j++){
+			var to = instance_find(oChamber, irandom(instance_number(oChamber)-1))
+			var currX = instance_find(oChamber, i).x
+			var currY = instance_find(oChamber, i).y
+			var cellH = sprite_get_width(sCell)
+			while(to.x != currX and to.y != currY){
+				show_debug_message(to.x-currX)
+				show_debug_message(to.y-currY)
+				if(to.x == x){
+					dir = 1	
+				}else if(to.y == y){
+					dir = 0
+				} else{
+					var dir = irandom(1)
 				}
+				if(dir == 0){
+					currX += cellH * sign(to.x-currX)
+				}
+				if(dir == 1){
+					currY += cellH * sign(to.y-currY)
+				}
+				instance_create_depth(currX, currY, depth, oHall)
 			}
+			wipeWalls()
+			instance_destroy(oHall)
 		}
 	}
+	instance_destroy(oChamber)
 }

@@ -5,16 +5,20 @@ function generateLevel(level){
 	randomize()
 	//Get Level Dimensions
 	var levelDims = getLevelDims(level)
-	show_debug_message(levelDims)
+	//Set Camera Max Dims
+	oCamera.camMaxHeight = (levelDims[1]-1) * sprite_get_height(sCell)
+	oCamera.camMaxWidth  = (levelDims[0]-1) * sprite_get_height(sCell)
 	//Make Cells
 	var rowAmount = irandom_range(levelDims[0], levelDims[1])
 	var colAmount = irandom_range(levelDims[2], levelDims[3])
-	show_debug_message(rowAmount)
-	show_debug_message(colAmount)
 	makeCells(rowAmount,colAmount)
 	//Generate Rooms
 	generateChambers(level, [colAmount, rowAmount])
 	//Generate Monsters
+	MonsterSpawning(levelDims)
+	//GenerateCrafting
+	CraftingSpawning(levelDims)
+	//GenerateTreasure
 	//Increment Level
 	level++
 }
