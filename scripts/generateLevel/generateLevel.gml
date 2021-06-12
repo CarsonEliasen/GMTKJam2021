@@ -12,6 +12,10 @@ function generateLevel(level){
 	//Generate Rooms
 	generateChambers(level, [colAmount, rowAmount])
 	//Generate Monsters
+	MonsterSpawning(levelDims)
+	//GenerateCrafting
+	CraftingSpawning(levelDims)
+	//GenerateTreasure
 	//Increment Level
 	level++
 }

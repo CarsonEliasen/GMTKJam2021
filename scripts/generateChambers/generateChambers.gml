@@ -39,5 +39,5 @@ function generateChambers(level, levelDims){
 			instance_destroy(oHall)
 		}
 	}
-	//instance_destroy(oHall)
+	instance_destroy(oChamber)
 }
