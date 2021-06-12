@@ -29,5 +29,7 @@ function makeChamber(levelDims, numChambers, startX, startY){
 			}
 		}
 	}
-	return [startX, startY, chamberWidth, chamberHeight, chamberType]
+	var cellHeight = sprite_get_height(sCell)
+	instance_create_depth(startX *cellHeight, startY*cellHeight, depth, oChamber)
+	return [startX*cellHeight, startY*cellHeight, chamberWidth, chamberHeight, chamberType]
 }
