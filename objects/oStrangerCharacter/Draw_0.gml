@@ -1,1 +1,1 @@
-drawBlockText("!", c_white)
+drawBlockText("!", c_yellow)

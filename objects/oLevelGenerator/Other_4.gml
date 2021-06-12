@@ -1,1 +1,1 @@
-generateLevel(level)
+levelDims = generateLevel(level)
