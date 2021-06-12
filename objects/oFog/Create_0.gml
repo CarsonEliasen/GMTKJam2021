@@ -1,0 +1,1 @@
+visibility = 9 * sprite_get_height(sCell)
