@@ -11,33 +11,34 @@ function generateChambers(level, levelDims){
 	instance_destroy(oHall)
 	for(var i = 0; i < instance_number(oChamber); i++){
 		var connections = irandom_range(2, instance_number(oChamber)/2)
-		//var connections = irandom_range(1, 1)
+		//var connections = 1
 		for(var j = 0; j < connections; j++){
 			var to = instance_find(oChamber, irandom(instance_number(oChamber)-1))
 			var currX = instance_find(oChamber, i).x
 			var currY = instance_find(oChamber, i).y
 			var cellH = sprite_get_width(sCell)
-			while(to.x != currX and to.y != currY){
-				show_debug_message(to.x-currX)
-				show_debug_message(to.y-currY)
-				if(to.x == x){
-					dir = 1	
-				}else if(to.y == y){
-					dir = 0
+			instance_create_depth(to.x, to.y, depth, oHall)
+			instance_create_depth(currX, currY, depth, oHall)
+			var countX = 0
+			var countY = 0
+			while(countX <= abs(currX-to.x)/cellH or countY <= abs(currY-to.y)/cellH){
+				var dir = 0
+				if(countX <= abs(currX-to.x)/cellH and countY <= abs(currY-to.y)/cellH){
+					dir = irandom(1)
+					if(dir == 0){
+						countX++
+					} else{
+						countY++	
+					}
+				} else if(countX <= abs(currX-to.x)/cellH){
+					countX++
 				} else{
-					var dir = irandom(1)
+					countY++
 				}
-				if(dir == 0){
-					currX += cellH * sign(to.x-currX)
-				}
-				if(dir == 1){
-					currY += cellH * sign(to.y-currY)
-				}
-				instance_create_depth(currX, currY, depth, oHall)
+				instance_create_depth(currX + countX*cellH*sign(to.x-currX), currY + countY*cellH*sign(to.y-currY), depth, oHall)
 			}
 			wipeWalls()
 			instance_destroy(oHall)
 		}
 	}
-	instance_destroy(oChamber)
 }
