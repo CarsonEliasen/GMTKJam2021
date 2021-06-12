@@ -1,1 +1,0 @@
-drawBlockText("?", c_white)

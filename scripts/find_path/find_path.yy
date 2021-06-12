@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Character.yy",
   },
   "resourceVersion": "1.0",
-  "name": "move_character",
+  "name": "find_path",
   "tags": [],
   "resourceType": "GMScript",
 }
