@@ -22,6 +22,8 @@ function generateLevel(level){
 	//Relocate Characters
 	characterRelication(levelDims)
 	StrangerSpawning(levelDims, level)
+	//Make Door
+	DoorSpawning(levelDims)
 	//Increment Level
 	level++
 	//Return Dims
