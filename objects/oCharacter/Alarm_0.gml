@@ -12,8 +12,9 @@ if (!ds_queue_empty(move_queue)) {
 			instance_destroy(move_target)
 			move_target = noone
 			move_queue = ds_queue_create()
+			audio_play_sound(soundArrived, 11, false)
 		}
+		audio_play_sound(soundStep, 11, false)
 	}
-	audio_play_sound(soundStep, 11, false)
 }
 alarm[0] = 1 * room_speed

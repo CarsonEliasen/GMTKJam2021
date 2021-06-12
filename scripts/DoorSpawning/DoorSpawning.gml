@@ -4,7 +4,7 @@ function DoorSpawning(levelDims){
 	show_debug_message("DOOR GEN")
 	var cellH = sprite_get_height(sCell)
 	var spawnX = irandom_range(1,levelDims[0]-1) * cellH
-	var spawnY = irandom_range(1,levelDims[2]-1) * cellH
+	var spawnY = irandom_range(1,levelDims[1]-1) * cellH
 	show_debug_message(levelDims)
 	var door = instance_create_depth(spawnX, spawnY, depth, oDoor)
 	

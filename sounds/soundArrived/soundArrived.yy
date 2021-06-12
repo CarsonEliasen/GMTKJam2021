@@ -1,6 +1,6 @@
 {
   "compression": 0,
-  "volume": 0.28,
+  "volume": 0.44,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "soundClick2.wav",
-  "duration": 0.38881,
+  "soundFile": "soundArrived.wav",
+  "duration": 0.185499,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "soundClick2",
+  "name": "soundArrived",
   "tags": [],
   "resourceType": "GMSound",
 }

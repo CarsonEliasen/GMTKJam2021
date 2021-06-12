@@ -1,6 +1,6 @@
 {
   "compression": 0,
-  "volume": 0.28,
+  "volume": 0.5,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "soundClick2.wav",
-  "duration": 0.38881,
+  "soundFile": "soundCharSwitch.wav",
+  "duration": 0.4728,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "soundClick2",
+  "name": "soundCharSwitch",
   "tags": [],
   "resourceType": "GMSound",
 }
