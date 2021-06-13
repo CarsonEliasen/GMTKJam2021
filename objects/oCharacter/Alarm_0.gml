@@ -28,7 +28,9 @@ if (attack_target != noone) {
 // perform movement
 if (!ds_queue_empty(move_queue)) {
 	var step_cell = ds_queue_dequeue(move_queue)
-	var nearest_occ = instance_nearest(step_cell.x, step_cell.y, oCellOccupier)
+	if(instance_exists(oCellOccupier)){
+		var nearest_occ = instance_nearest(step_cell.x, step_cell.y, oCellOccupier)
+	}
 	if (step_cell == move_target_cell) {
 		move_target_cell = noone
 		instance_destroy(move_target)

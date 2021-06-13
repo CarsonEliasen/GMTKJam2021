@@ -9,8 +9,10 @@ function generateLevel(level){
 	oCamera.camMaxHeight = (levelDims[1]-1) * sprite_get_height(sCell)
 	oCamera.camMaxWidth  = (levelDims[0]-1) * sprite_get_height(sCell)
 	//Make Cells
-	var rowAmount = irandom_range(levelDims[0], levelDims[1])
-	var colAmount = irandom_range(levelDims[2], levelDims[3])
+	//var rowAmount = irandom_range(levelDims[0], levelDims[1])
+	//var colAmount = irandom_range(levelDims[2], levelDims[3])
+	var rowAmount = 32
+	var colAmount = 32
 	makeCells(rowAmount,colAmount)
 	levelDims = [colAmount, rowAmount]
 	//Generate Rooms
