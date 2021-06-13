@@ -20,6 +20,14 @@ y += (yTo-y)/5
 if(follow != noone){
 	xTo = follow.x
 	yTo = follow.y
+} else{
+	var party = oPlayer.party
+	for(var i = 0; i < array_length(party); i++){
+		var member = party[i]
+		if(member != 4){
+			follow = member	
+		}
+	}
 }
 
 

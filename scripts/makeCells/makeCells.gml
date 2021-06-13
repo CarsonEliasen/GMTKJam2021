@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function makeCells(width, height){
+function makeCells(width, height, spawnFog){
 	var cellWidth = sprite_get_height(sCell)
 	for(var col = 0; col < width; col++){
 		for(var row = 0; row < height; row++){
@@ -18,7 +18,9 @@ function makeCells(width, height){
 			}
 			array_push(cell.contains, wall)
 			//Create Fog
-			instance_create_depth(posX, posY, depth-1, oFog)	
+			if(spawnFog){
+				instance_create_depth(posX, posY, depth-1, oFog)
+			}
 		}
 	}
 }

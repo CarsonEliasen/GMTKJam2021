@@ -14,4 +14,4 @@ if (nearest_occ.x != new_x and nearest_occ.y != new_y) {
 	x = new_x
 	y = new_y
 }
-alarm[0] = 5 * room_speed
+alarm[0] = alarmTime * room_speed

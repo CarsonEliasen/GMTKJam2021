@@ -1,0 +1,1 @@
+drawBlockText("G", c_red)
