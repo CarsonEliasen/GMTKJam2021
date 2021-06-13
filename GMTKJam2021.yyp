@@ -16,6 +16,7 @@
     {"id":{"name":"soundStep","path":"sounds/soundStep/soundStep.yy",},"order":8,},
     {"id":{"name":"soundClick1","path":"sounds/soundClick1/soundClick1.yy",},"order":4,},
     {"id":{"name":"generateChambers","path":"scripts/generateChambers/generateChambers.yy",},"order":0,},
+    {"id":{"name":"oButtonDecendConfirm","path":"objects/oButtonDecendConfirm/oButtonDecendConfirm.yy",},"order":1,},
     {"id":{"name":"wipeWalls","path":"scripts/wipeWalls/wipeWalls.yy",},"order":9,},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":0,},
     {"id":{"name":"oCellOccupier","path":"objects/oCellOccupier/oCellOccupier.yy",},"order":8,},
@@ -41,6 +42,7 @@
     {"id":{"name":"sCellEmpty","path":"sprites/sCellEmpty/sCellEmpty.yy",},"order":4,},
     {"id":{"name":"makeCells","path":"scripts/makeCells/makeCells.yy",},"order":0,},
     {"id":{"name":"oStrangerCharacter","path":"objects/oStrangerCharacter/oStrangerCharacter.yy",},"order":7,},
+    {"id":{"name":"oButtonMaster","path":"objects/oButtonMaster/oButtonMaster.yy",},"order":0,},
     {"id":{"name":"oUIController","path":"objects/oUIController/oUIController.yy",},"order":9,},
     {"id":{"name":"soundHitHurt","path":"sounds/soundHitHurt/soundHitHurt.yy",},"order":3,},
     {"id":{"name":"oFog","path":"objects/oFog/oFog.yy",},"order":10,},
@@ -107,6 +109,7 @@
     {"folderPath":"folders/Objects/Monsters.yy","order":4,"resourceVersion":"1.0","name":"Monsters","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Crafting.yy","order":5,"resourceVersion":"1.0","name":"Crafting","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Scripts/Aesthetics/UI.yy","order":1,"resourceVersion":"1.0","name":"UI","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/Buttons.yy","order":11,"resourceVersion":"1.0","name":"Buttons","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},

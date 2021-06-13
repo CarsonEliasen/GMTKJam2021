@@ -9,7 +9,7 @@ for (var i = 1; i <= 5; i++) {
 		}
 	}
 }
-if (mouse_check_button_released(mb_left) and !position_meeting(oCursor.x, oCursor.y, oFog)) {
+if (mouse_check_button_released(mb_left) and !position_meeting(oCursor.x, oCursor.y, oFog) and !position_meeting(oCursor.x, oCursor.y, oButtonMaster)) {
 	var clicked_cell = instance_nearest(oCursor.x, oCursor.y, oCell)
 	var nearest_stranger = instance_nearest(clicked_cell.x, clicked_cell.y, oStrangerCharacter)
 	var nearest_wall = instance_nearest(clicked_cell.x, clicked_cell.y, oWall)
