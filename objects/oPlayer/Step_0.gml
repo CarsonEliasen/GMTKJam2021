@@ -5,10 +5,11 @@ for (var i = 1; i <= 5; i++) {
 			selected_character = party[i - 1]
 			selected_character.is_selected = true
 			oCamera.follow = selected_character
+			audio_play_sound(soundCharSwitch, 11, false)
 		}
 	}
 }
-if (mouse_check_button_released(mb_left)) {
+if (mouse_check_button_released(mb_left) and !position_meeting(oCursor.x, oCursor.y, oFog) and !position_meeting(oCursor.x, oCursor.y, oButtonMaster)) {
 	var clicked_cell = instance_nearest(oCursor.x, oCursor.y, oCell)
 	var nearest_stranger = instance_nearest(clicked_cell.x, clicked_cell.y, oStrangerCharacter)
 	var nearest_wall = instance_nearest(clicked_cell.x, clicked_cell.y, oWall)
@@ -28,8 +29,9 @@ if (mouse_check_button_released(mb_left)) {
 				}
 			}
 		}
+		audio_play_sound(soundClick2, 11, false)
 	} else if (nearest_wall != noone and nearest_wall.x == clicked_cell.x and nearest_wall.y == clicked_cell.y) {
-		
+		audio_play_sound(soundClick1, 11, false)
 	} 
 	else {
 		move_character(selected_character, clicked_cell)
