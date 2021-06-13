@@ -14,7 +14,7 @@ if(!tutorial){
 	var vSpace = 20
 	draw_text(xWrite, yWrite + vSpace*0, "Cell Key:")
 	draw_set_color(c_lime)
-	draw_text(xWrite, yWrite + vSpace*1,  "1-5 - Your Characters")
+	draw_text(xWrite, yWrite + vSpace*1,  "1-5    - Your Characters")
 	draw_set_color(c_yellow)
 	draw_text(xWrite, yWrite + vSpace*2,  "!      - Stranger, can join your party (max 5)")
 	draw_set_color(c_orange)
@@ -26,7 +26,7 @@ if(!tutorial){
 	draw_set_color(c_aqua)
 	draw_text(xWrite, yWrite + vSpace*6,  "( )    - Armory, can spend esscence here to craft armor")
 	draw_set_color(c_aqua)
-	draw_text(xWrite, yWrite + vSpace*7,  "| |    - Forge, can spend esscence here to craft swords")
+	draw_text(xWrite, yWrite + vSpace*7,  "| |    - Forge, can spend esscence here to craft weapons")
 	draw_set_color(c_aqua)
 	draw_text(xWrite, yWrite + vSpace*8,  "{ }    - Spell desk, can spend esscence here to craft spells")
 	draw_set_color(c_white)
@@ -42,7 +42,7 @@ if(!tutorial){
 	
 	//Controls
 	draw_set_halign(fa_left)
-	var xWrite = room_width/2 + room_width/15 * 2
+	var xWrite = room_width/2 + 50
 	var yWrite = room_height/6
 	var vSpace = 20
 	draw_set_color(c_white)
@@ -56,7 +56,9 @@ if(!tutorial){
 	draw_text(xWrite + vSpace * 2, yWrite + vSpace*4, "Note: one party member must be on top of the portal")
 	draw_set_color(c_aqua)
 	draw_text(xWrite, yWrite + vSpace*5, "Q - Selected character uses their consumable item")
-	
-	
+	draw_set_color(c_aqua)
+	draw_text(xWrite, yWrite + vSpace*6, "A,S - Crafting station essence use")
+	draw_set_color(c_aqua)
+	draw_text(xWrite, yWrite + vSpace*7, "Shift - Submit craft")
 	
 }

@@ -1,6 +1,6 @@
 {
   "compression": 0,
-  "volume": 0.44,
+  "volume": 1.0,
   "preload": false,
   "bitRate": 8,
   "sampleRate": 5512,
@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "soundArrived.wav",
-  "duration": 0.185499,
+  "duration": 0.433345,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
