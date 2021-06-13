@@ -53,6 +53,7 @@
     {"id":{"name":"oArmory","path":"objects/oArmory/oArmory.yy",},"order":4,},
     {"id":{"name":"soundBuff","path":"sounds/soundBuff/soundBuff.yy",},"order":0,},
     {"id":{"name":"buildHall","path":"scripts/buildHall/buildHall.yy",},"order":7,},
+    {"id":{"name":"oWin","path":"objects/oWin/oWin.yy",},"order":16,},
     {"id":{"name":"oSpellDesk","path":"objects/oSpellDesk/oSpellDesk.yy",},"order":5,},
     {"id":{"name":"character_attack","path":"scripts/character_attack/character_attack.yy",},"order":3,},
     {"id":{"name":"characterRelication","path":"scripts/characterRelication/characterRelication.yy",},"order":2,},
@@ -109,6 +110,7 @@
     {"id":{"name":"crafting_craft_spell","path":"scripts/crafting_craft_spell/crafting_craft_spell.yy",},"order":3,},
     {"id":{"name":"Room12","path":"rooms/Room12/Room12.yy",},"order":12,},
     {"id":{"name":"oButtonStartGame","path":"objects/oButtonStartGame/oButtonStartGame.yy",},"order":2,},
+    {"id":{"name":"rWin","path":"rooms/rWin/rWin.yy",},"order":18,},
     {"id":{"name":"Room15","path":"rooms/Room15/Room15.yy",},"order":15,},
     {"id":{"name":"soundAttackF","path":"sounds/soundAttackF/soundAttackF.yy",},"order":6,},
     {"id":{"name":"oButtonTutorialCancel","path":"objects/oButtonTutorialCancel/oButtonTutorialCancel.yy",},"order":5,},
@@ -132,6 +134,7 @@
     "children": [],
   },
   "RoomOrderNodes": [
+    {"roomId":{"name":"rWin","path":"rooms/rWin/rWin.yy",},},
     {"roomId":{"name":"rMenu","path":"rooms/rMenu/rMenu.yy",},},
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
