@@ -57,8 +57,10 @@ if(!tutorial){
 	draw_set_color(c_aqua)
 	draw_text(xWrite, yWrite + vSpace*5, "Q - Selected character uses their consumable item")
 	draw_set_color(c_aqua)
-	draw_text(xWrite, yWrite + vSpace*6, "A,S - Crafting station essence use")
+	draw_text(xWrite, yWrite + vSpace*6, "W - Selected character uses their spell")
 	draw_set_color(c_aqua)
-	draw_text(xWrite, yWrite + vSpace*7, "Shift - Submit craft")
+	draw_text(xWrite, yWrite + vSpace*7, "A,S - Crafting station essence use")
+	draw_set_color(c_aqua)
+	draw_text(xWrite, yWrite + vSpace*8, "Shift - Submit craft")
 	
 }
