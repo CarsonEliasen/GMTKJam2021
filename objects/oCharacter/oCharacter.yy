@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "sCellEmpty",
+    "path": "sprites/sCellEmpty/sCellEmpty.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

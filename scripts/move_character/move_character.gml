@@ -9,7 +9,7 @@ function move_character(character, target_cell){
 	if (move_path == noone) {
 		return
 	}
-	for (var i = 0; i <= ds_list_size(move_path); i++) {
+	for (var i = 1; i <= ds_list_size(move_path); i++) {
 		ds_queue_enqueue(move_queue, ds_list_find_value(move_path, i))
 	}
 	character.move_target_cell = target_cell

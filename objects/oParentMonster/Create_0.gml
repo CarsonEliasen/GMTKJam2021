@@ -1,2 +1,3 @@
 cellHeight = sprite_get_height(sCell)
-alarm[0] = 5*room_speed
+aggro_range = 500
+alarm[0] = 5 * room_speed

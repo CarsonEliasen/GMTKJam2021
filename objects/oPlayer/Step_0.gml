@@ -11,26 +11,19 @@ for (var i = 1; i <= 5; i++) {
 if (mouse_check_button_released(mb_left)) {
 	var clicked_cell = instance_nearest(oCursor.x, oCursor.y, oCell)
 	var nearest_stranger = instance_nearest(clicked_cell.x, clicked_cell.y, oStrangerCharacter)
-	var nearest_wall = instance_nearest(clicked_cell.x, clicked_cell.y, oWall)
-	if (nearest_stranger != noone and nearest_stranger.x == clicked_cell.x and nearest_stranger.y == clicked_cell.y) {
-		var stranger = instance_nearest(clicked_cell.x, clicked_cell.y, oStrangerCharacter)
-		var stranger_dist_x = stranger.x - selected_character.x
-		var stranger_dist_y = stranger.y - selected_character.y
-		var cell_size = clicked_cell.sprite_height
-		if (stranger_dist_x <= cell_size and stranger_dist_y <= cell_size) {
-			for (var i = 1; i <= array_length(party); i++) {
-				if (party[i - 1] == noone) {
-					var new_character = instance_create_layer(stranger.x, stranger.y, layer_get_id("Characters"), oCharacter)
-					new_character.character_id = i
-					party[i - 1] = new_character
-					instance_destroy(stranger)
-					break
-				}
-			}
-		}
-	} else if (nearest_wall != noone and nearest_wall.x == clicked_cell.x and nearest_wall.y == clicked_cell.y) {
+	var nearest_monster = instance_nearest(clicked_cell.x, clicked_cell.y, oParentMonster)
+	if (position_meeting(clicked_cell.x, clicked_cell.y, oWall)) {
 		
+	} else if (nearest_stranger != noone and clicked_cell.x == nearest_stranger.x and clicked_cell.y == nearest_stranger.y) {
+		show_debug_message("clicked on a stranger")
+		selected_character.recruit_target = nearest_stranger
+		selected_character.attack_target = noone
 	} 
+	else if (clicked_cell.x == nearest_monster.x and clicked_cell.y == nearest_monster.y) {
+		show_debug_message("clicked on a monster")
+		selected_character.attack_target = nearest_monster
+		selected_character.recruit_target = noone
+	}
 	else {
 		move_character(selected_character, clicked_cell)
 	}
