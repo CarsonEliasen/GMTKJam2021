@@ -14,7 +14,6 @@ if (recruit_target != noone) {
 }
 // move towards attack target / interact with it
 if (attack_target != noone) {
-	show_debug_message(attack_target)
 	var dist_x = abs(x - attack_target.x)
 	var dist_y = abs(y - attack_target.y)
 	if (dist_x <= cell_size and dist_y <= cell_size) {

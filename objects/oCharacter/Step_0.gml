@@ -18,7 +18,22 @@ if(magic_slot != noone){
 		var dmg = magic_slot.spellDamage
 		with(oParentMonster){
 			if(point_distance(x,y, charX, charY) < 46){
-				hp -= dmg	
+				hp -= dmg
+				if (hp <= 0) {
+					var party = oPlayer.party
+					for(var i = 0; i < array_length(party); i++){
+						var member = party[i]
+						if(member != -4){
+							if(member.attack_target == character.attack_target){
+								member.attack_target = noone
+								move_target_cell = noone
+								member.instance_destroy(move_target)
+								member.move_target = noone
+								member.move_queue = ds_queue_create()
+							}
+						}
+					}
+				}
 			}
 		}
 		drawSpell = true
