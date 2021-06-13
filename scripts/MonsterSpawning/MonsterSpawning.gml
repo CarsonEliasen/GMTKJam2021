@@ -22,6 +22,8 @@ function MonsterSpawning(levelDims){
 			var monster = instance_create_depth(spawnX, spawnY, depth, monsterSpawn)
 			var xpGain = monster.baseXP + monster.XPIncrease * level
 			monster.xp += irandom_range(xpGain * .8, xpGain * 1.2)
+			monster.hp = monster.baseHealth + monster.healthIncrease*irandom_range(level div 2, round(level*1.5))
+			monster.dmg = monster.baseDamage + monster.damageIncrease*irandom_range(level div 2, round(level*1.5))
 			numMonsters--
 		}
 	}

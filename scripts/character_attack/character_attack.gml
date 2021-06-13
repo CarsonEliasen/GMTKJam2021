@@ -5,7 +5,15 @@ function character_attack(character){
 	audio_play_sound(soundAttackF, 11, false)
 	character.attack_target.hp -= damage
 	if (character.attack_target.hp <= 0) {
-		character.attack_target = noone
+		var party = oPlayer.party
+		for(var i = 0; i < array_length(party); i++){
+			var member = party[i]
+			if(member != -4){
+				if(member.attack_target == character.attack_target){
+					member.attack_target = noone	
+				}
+			}
+		}
 		move_target_cell = noone
 		instance_destroy(move_target)
 		move_target = noone

@@ -63,4 +63,13 @@ if(!tutorial){
 	draw_set_color(c_aqua)
 	draw_text(xWrite, yWrite + vSpace*8, "Shift - Submit craft")
 	
+	draw_set_color(c_white)
+	draw_text(xWrite+40, yWrite + vSpace*10, "Mechanics:")
+	draw_set_color(c_red)
+	draw_text(xWrite+40, yWrite + vSpace*11, "A character's strength affects how much health they have")
+	draw_set_color(c_lime)
+	draw_text(xWrite+40, yWrite + vSpace*12, "A character's agillity affects how fast they can act")
+	draw_set_color(c_aqua)
+	draw_text(xWrite+40, yWrite + vSpace*13, "A character's agillity affects how fast they can cast spells")
+	
 }
