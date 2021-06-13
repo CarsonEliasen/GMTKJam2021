@@ -35,6 +35,7 @@ for(var i = 0; i < array_length(party); i++){
 		draw_set_color(c_white)
 		
 		//Draw Slots
+		draw_set_font(fSmall)
 		var slotWidth = barWidth/4
 		draw_set_color(c_black)
 		draw_set_alpha(.5)
@@ -43,7 +44,7 @@ for(var i = 0; i < array_length(party); i++){
 		draw_set_alpha(1)
 		draw_rectangle(startX, startY + barHieght+4, startX + slotWidth, startY + barHieght + barHieght/2+4, true)
 		if(instance_exists(member.consumable_slot)){
-			draw_text(startX + slotWidth/2, startY + barHieght+4+barHieght/4, "C:" + string(member.consumable_slot))
+			draw_text(startX + slotWidth/2, startY + barHieght+4+barHieght/4, "C:" + string(round(member.consumable_slot.hp_restore)))
 		}
 		draw_set_color(c_black)
 		draw_set_alpha(.5)
@@ -51,7 +52,7 @@ for(var i = 0; i < array_length(party); i++){
 		draw_set_color(c_white)
 		draw_set_alpha(1)
 		if(instance_exists(member.magic_slot)){
-			draw_text(startX + slotWidth/2, startY + barHieght+4+barHieght/4, "S:" + string(member.magic_slot))
+			draw_text(startX + slotWidth/2 * 3, startY + barHieght+4+barHieght/4, "S:" + string(member.magic_slot))
 		}
 		draw_rectangle(startX + slotWidth+1, startY + barHieght+4, startX + slotWidth*2, startY + barHieght + barHieght/2+4, true)
 		draw_set_color(c_black)
@@ -60,7 +61,7 @@ for(var i = 0; i < array_length(party); i++){
 		draw_set_color(c_white)
 		draw_set_alpha(1)
 		if(instance_exists(member.weapon_slot)){
-			draw_text(startX + slotWidth/2, startY + barHieght+4+barHieght/4, "W:" + string(member.weapon_slot))
+			draw_text(startX + slotWidth/2 * 5, startY + barHieght+4+barHieght/4, "W:" + string(round(member.weapon_slot.damage_bonus)))
 		}
 		draw_rectangle(startX + slotWidth*2+1, startY + barHieght+4, startX + slotWidth*3, startY + barHieght + barHieght/2+4, true)
 		draw_set_color(c_black)
@@ -69,10 +70,10 @@ for(var i = 0; i < array_length(party); i++){
 		draw_set_color(c_white)
 		draw_set_alpha(1)
 		if(instance_exists(member.armor_slot)){
-			draw_text(startX + slotWidth/2, startY + barHieght+4+barHieght/4, "A:" + string(member.armor_slot))
+			draw_text(startX + slotWidth/2 * 7, startY + barHieght+4+barHieght/4, "A:" + string(round(member.armor_slot.defense_bonus)))
 		}
 		draw_rectangle(startX + slotWidth*3+1, startY + barHieght+4, startX + slotWidth*4, startY + barHieght + barHieght/2+4, true)
-		
+		draw_set_font(fDef)
 		//Draw Name
 		drawStats(member, i, startX, startY, barWidth)
 	}

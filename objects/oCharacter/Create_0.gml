@@ -25,4 +25,4 @@ recruit_target = noone
 move_target_cell = noone
 move_target = noone
 move_queue = ds_queue_create()
-alarm[0] = 0.5 * room_speed
+alarm[0] = (2.5 / agility) * room_speed
