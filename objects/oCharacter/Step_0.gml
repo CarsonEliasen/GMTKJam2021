@@ -30,7 +30,7 @@ if (hp > strength) {
 }
 if (hp <= 0) {
 	oPlayer.party[character_id - 1] = noone
-	instance_destroy(move_target_cell)
+	instance_destroy(move_target)
 	instance_destroy(id)
 }
 
