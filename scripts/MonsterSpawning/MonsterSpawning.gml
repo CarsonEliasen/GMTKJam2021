@@ -6,7 +6,17 @@ function MonsterSpawning(levelDims){
 		var cellH = sprite_get_height(sCell)
 		var spawnX = irandom_range(1,levelDims[0]-1) * cellH
 		var spawnY = irandom_range(1,levelDims[1]-1) * cellH
+		var monsterSpawnP = irandom(99)
 		var monsterSpawn = monsters[irandom(array_length(monsters)-1)];
+		if(monsterSpawnP > 90){
+			monsterSpawn = oGhost
+		} else if(monsterSpawnP > 70){
+			monsterSpawn = oSkeleton
+		} else if(monsterSpawnP > 40){
+			monsterSpawn = oTroll
+		} else{
+			monster = oOrc	
+		}
 		var nearWall = instance_nearest(spawnX, spawnY, oWall)
 		if(nearWall.x != spawnX and nearWall.y != spawnY){
 			var monster = instance_create_depth(spawnX, spawnY, depth, monsterSpawn)
