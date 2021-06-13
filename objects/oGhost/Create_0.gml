@@ -1,7 +1,7 @@
 baseHealth = 9999999
 healthIncrease = 0
 hp = baseHealth
-baseDamage = 2
+baseDamage = 1
 damageIncrease = .5
 dmg = baseDamage
 baseXP = 5
