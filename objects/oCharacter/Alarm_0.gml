@@ -13,7 +13,7 @@ if (recruit_target != noone) {
 	}
 }
 // move towards attack target / interact with it
-if (attack_target != noone) {
+if (attack_target != noone and instance_exists(attack_target)) {
 	var dist_x = abs(x - attack_target.x)
 	var dist_y = abs(y - attack_target.y)
 	if (dist_x <= cell_size and dist_y <= cell_size) {
@@ -24,6 +24,8 @@ if (attack_target != noone) {
 			move_character(id, attack_target_cell)
 		}
 	}
+} else if (!instance_exists(attack_target)) {
+	attack_target = noone
 }
 // perform movement
 if (!ds_queue_empty(move_queue)) {
