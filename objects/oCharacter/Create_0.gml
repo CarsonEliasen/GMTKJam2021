@@ -1,8 +1,11 @@
 // character attributes
 randomize()
-agility = irandom_range(1, 10)
-intelligence = irandom_range(1, 10)
-strength = irandom_range(1, 10)
+base_agility = irandom_range(1, 10)
+base_intelligence = irandom_range(1, 10)
+base_strength = irandom_range(1, 10)
+agility = base_agility
+intelligence = base_intelligence
+strength = base_strength
 base_damage = 1
 // combat state
 hp = strength

@@ -29,3 +29,9 @@ if (mouse_check_button_released(mb_left) and !position_meeting(oCursor.x, oCurso
 		move_character(selected_character, clicked_cell)
 	}
 }
+if (keyboard_check_pressed(ord("Q"))) {
+	if (selected_character.consumable_slot != noone) {
+		selected_character.hp = selected_character.hp + selected_character.consumable_slot.hp_restore
+		selected_character.consumable_slot = noone
+	}
+}
