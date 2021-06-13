@@ -1,0 +1,5 @@
+draw_set_font(fMenu)
+draw_set_halign(fa_middle)
+draw_set_valign(fa_center)
+draw_text(room_width/2, room_height/3, "GAME OVER :(")
+draw_set_font(fDef)
