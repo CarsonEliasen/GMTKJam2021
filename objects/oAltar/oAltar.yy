@@ -27,7 +27,7 @@
     "path": "folders/Objects/Crafting.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oAlter",
+  "name": "oAltar",
   "tags": [],
   "resourceType": "GMObject",
 }

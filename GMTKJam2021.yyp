@@ -70,7 +70,7 @@
     {"id":{"name":"Room11","path":"rooms/Room11/Room11.yy",},"order":11,},
     {"id":{"name":"oChamber","path":"objects/oChamber/oChamber.yy",},"order":3,},
     {"id":{"name":"oParentMonster","path":"objects/oParentMonster/oParentMonster.yy",},"order":2,},
-    {"id":{"name":"oAlter","path":"objects/oAlter/oAlter.yy",},"order":2,},
+    {"id":{"name":"oAltar","path":"objects/oAltar/oAltar.yy",},"order":2,},
     {"id":{"name":"sCell","path":"sprites/sCell/sCell.yy",},"order":1,},
     {"id":{"name":"soundExplosion","path":"sounds/soundExplosion/soundExplosion.yy",},"order":1,},
     {"id":{"name":"sFog","path":"sprites/sFog/sFog.yy",},"order":5,},

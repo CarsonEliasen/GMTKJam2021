@@ -1,1 +1,1 @@
-drawBlockText("{}", c_aqua)
+drawBlockText("( )", c_aqua)

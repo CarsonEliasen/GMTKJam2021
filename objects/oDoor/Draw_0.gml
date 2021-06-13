@@ -1,4 +1,4 @@
-drawBlockText("[]", c_orange)
+drawBlockText("[ ]", c_orange)
 
 if(!position_meeting(x,y,oFog)){
 	if(playerProx){

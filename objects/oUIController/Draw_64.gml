@@ -2,7 +2,7 @@
 var width = window_get_width()/6
 var height = window_get_height()
 
-//Draw BG
+// Draw BG
 draw_set_alpha(.5)
 draw_set_color(c_dkgray)
 draw_rectangle(0,
@@ -12,14 +12,15 @@ draw_rectangle(0,
 draw_set_alpha(1)
 draw_set_color(c_white)
 
-//Draw Character Stats
+
+// Draw Character Stats
 var party = oPlayer.party
 for(var i = 0; i < array_length(party); i++){
 	var member = party[i]
 	if(member != -4){
 		//Draw Charcter HP
 		//var currHP = hp/hpMax
-		var currHP = .75
+		var currHP = member.hp / member.strength
 		var barWidth = width * .9
 		var barHieght = height * .05
 		var startY = ((height-barHieght)/5 * i) + (height-barHieght*5)/5
@@ -37,3 +38,11 @@ for(var i = 0; i < array_length(party); i++){
 		drawStats(member, i, startX, startY, barWidth)
 	}
 }
+
+// Draw current XP
+draw_set_halign(fa_center)
+draw_set_valign(fa_middle)
+draw_set_color(c_fuchsia)
+draw_rectangle(0, 0, width, height * 0.1, true)
+draw_set_color(c_white)
+draw_text(width / 2, height * 0.1 / 2, string(oPlayer.xp))
