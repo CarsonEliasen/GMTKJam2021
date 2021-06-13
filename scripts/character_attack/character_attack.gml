@@ -6,5 +6,9 @@ function character_attack(character){
 	character.attack_target.hp -= damage
 	if (character.attack_target.hp <= 0) {
 		character.attack_target = noone
+		move_target_cell = noone
+		instance_destroy(move_target)
+		move_target = noone
+		move_queue = ds_queue_create()
 	}
 }

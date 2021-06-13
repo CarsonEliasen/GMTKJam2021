@@ -29,11 +29,14 @@ if (mouse_check_button_released(mb_left) and !position_meeting(oCursor.x, oCurso
 		selected_character.recruit_target = noone
 	}
 	else {
+		selected_character.attack_target = noone
+		selected_character.recruit_target = noone
 		move_character(selected_character, clicked_cell)
 	}
 }
 if (keyboard_check_pressed(ord("Q"))) {
 	if (selected_character.consumable_slot != noone) {
+		audio_play_sound(soundBuff, 11, false)
 		selected_character.hp = selected_character.hp + selected_character.consumable_slot.hp_restore
 		selected_character.consumable_slot = noone
 	}
