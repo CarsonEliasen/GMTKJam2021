@@ -9,9 +9,9 @@ function crafting_craft_buff(crafter, character, xp){
 	agility_bonus /= bonus_total
 	intelligence_bonus /= bonus_total
 	strength_bonus /= bonus_total
-	agility_bonus *= xp / 200
-	intelligence_bonus *= xp / 200
-	strength_bonus *= xp / 200
+	agility_bonus *= xp / 100
+	intelligence_bonus *= xp / 100
+	strength_bonus *= xp / 100
 	var buff = instance_create_layer(character.x, character.y, layer_get_id("Characters"), oBuff)
 	buff.agility_bonus = agility_bonus
 	buff.intelligence_bonus = intelligence_bonus
