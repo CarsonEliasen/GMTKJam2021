@@ -52,7 +52,13 @@ for(var i = 0; i < array_length(party); i++){
 		draw_set_color(c_white)
 		draw_set_alpha(1)
 		if(instance_exists(member.magic_slot)){
-			draw_set_alpha((member.magic_slot.spellCD - member.currSpellCD)/member.magic_slot.spellCD)
+			var cd_progress = (member.magic_slot.spellCD - member.currSpellCD)/member.magic_slot.spellCD
+			if (cd_progress < 1) {
+				draw_set_alpha(cd_progress / 2)
+			}
+			else {
+				draw_set_alpha(1)
+			}
 			draw_text(startX + slotWidth/2 * 3, startY + barHieght+4+barHieght/4, "S:" + string(member.magic_slot.spellDamage))
 			draw_set_alpha(1)
 		}

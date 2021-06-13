@@ -17,9 +17,9 @@ function drawStats(member, i, startX, startY, barWidth){
 	draw_set_halign(fa_left)
 	draw_set_valign(fa_middle)
 	draw_text(startX, startY-16, name)
-	var str = string(member.base_strength)
-	var agl = string(member.base_agility)
-	var int = string(member.base_intelligence)
+	var str = string(round(member.base_strength))
+	var agl = string(round(member.base_agility))
+	var int = string(round(member.base_intelligence))
 	if(instance_exists(member.buff_slot)){
 		str += "+" + string(round(member.buff_slot.strength_bonus))
 		agl += "+" + string(round(member.buff_slot.agility_bonus))

@@ -1,8 +1,16 @@
 // character attributes
 randomize()
-base_agility = irandom_range(1, 10)
-base_intelligence = irandom_range(1, 10)
-base_strength = irandom_range(1, 10)
+var level = oLevelGenerator.level
+var agi_weight = random(10)
+var int_weight = random(10)
+var str_weight = random(10)
+var scale = agi_weight + int_weight + str_weight
+agi_weight /= scale
+int_weight /= scale
+str_weight /= scale
+base_agility = max(1, (level + 9) * agi_weight)
+base_intelligence = max(1, (level + 9) * int_weight)
+base_strength = max(1, (level + 9) * str_weight)
 agility = base_agility
 intelligence = base_intelligence
 strength = base_strength
