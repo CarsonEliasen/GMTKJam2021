@@ -24,7 +24,13 @@ function generateLevel(level){
 	characterRelication(levelDims)
 	StrangerSpawning(levelDims, level)
 	//Make Door
-	DoorSpawning(levelDims)
+	if(level != 15){
+		DoorSpawning(levelDims)
+	}
+	//Make Boss
+	if(level == 15){
+		SpawnBoss()
+	}
 	//Increment Level
 	level++
 	//Return Dims

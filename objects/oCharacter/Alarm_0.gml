@@ -1,4 +1,4 @@
-var cell_size = instance_nearest(x, y, oCell).sprite_height
+var cell_size = sprite_get_height(sCell)
 // move towards recruit target / interact with it
 if (recruit_target != noone) {
 	var dist_x = abs(x - recruit_target.x)
