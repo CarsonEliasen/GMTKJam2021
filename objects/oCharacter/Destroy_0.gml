@@ -1,3 +1,4 @@
+audio_play_sound(soundDeath,12,false)
 var party = oPlayer.party
 var gameOver = true
 for(var i = 0; i < array_length(party); i++){
