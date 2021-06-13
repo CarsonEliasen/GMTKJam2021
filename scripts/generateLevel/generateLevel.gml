@@ -34,7 +34,7 @@ function generateLevel(level){
 		SpawnBoss()
 	}
 	//Increment Level
-	level++
+	oLevelGenerator.level = oLevelGenerator.level + 1
 	//Return Dims
 	return levelDims
 }
