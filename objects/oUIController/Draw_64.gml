@@ -52,7 +52,9 @@ for(var i = 0; i < array_length(party); i++){
 		draw_set_color(c_white)
 		draw_set_alpha(1)
 		if(instance_exists(member.magic_slot)){
-			draw_text(startX + slotWidth/2 * 3, startY + barHieght+4+barHieght/4, "S:" + string(member.magic_slot))
+			draw_set_alpha((member.magic_slot.spellCD - member.currSpellCD)/member.magic_slot.spellCD)
+			draw_text(startX + slotWidth/2 * 3, startY + barHieght+4+barHieght/4, "S:" + string(member.magic_slot.spellDamage))
+			draw_set_alpha(1)
 		}
 		draw_rectangle(startX + slotWidth+1, startY + barHieght+4, startX + slotWidth*2, startY + barHieght + barHieght/2+4, true)
 		draw_set_color(c_black)
@@ -83,6 +85,8 @@ for(var i = 0; i < array_length(party); i++){
 draw_set_halign(fa_center)
 draw_set_valign(fa_middle)
 draw_set_color(c_fuchsia)
-draw_rectangle(0, 0, width, height * 0.1, true)
+draw_set_alpha(.6)
+draw_rectangle(0, 0, width, height * 0.1, false)
+draw_set_alpha(1)
 draw_set_color(c_white)
-draw_text(width / 2, height * 0.1 / 2, string(oPlayer.xp))
+draw_text(width / 2, height * 0.1 / 2, "Essence: " + string(oPlayer.xp))

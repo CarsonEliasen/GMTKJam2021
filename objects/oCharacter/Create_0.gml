@@ -16,6 +16,7 @@ weapon_slot = noone
 armor_slot = noone
 buff_slot = noone
 consumable_slot = noone
+currSpellCD = 0
 // control state
 character_id = 0
 is_selected = false

@@ -9,6 +9,21 @@ if (buff_slot != noone) {
 if (weapon_slot != noone) {
 	damage = base_damage + weapon_slot.damage_bonus
 }
+if(magic_slot != noone){
+	if(keyboard_check_pressed(ord("W")) and currSpellCD == 0 and oPlayer.selected_character == id){
+		//Cast Spell
+		currSpellCD = magic_slot.spellCD
+		var charX = x
+		var charY = y
+		var dmg = magic_slot.spellDamage
+		with(oParentMonster){
+			if(point_distance(x,y, charX, charY) < 46){
+				hp -= dmg	
+			}
+		}
+		audio_play_sound(soundExplosion, 12, false)
+	}
+}
 if (hp > strength) {
 	hp = strength
 }
@@ -16,4 +31,8 @@ if (hp <= 0) {
 	oPlayer.party[character_id - 1] = noone
 	instance_destroy(move_target_cell)
 	instance_destroy(id)
+}
+
+if(currSpellCD > 0){
+	currSpellCD--	
 }
