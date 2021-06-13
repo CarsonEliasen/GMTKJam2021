@@ -34,10 +34,14 @@ if (!ds_queue_empty(move_queue)) {
 		instance_destroy(move_target)
 		move_target = noone
 		move_queue = ds_queue_create()
+    audio_play_sound(soundArrived, 11, false)
 	}
 	if (nearest_occ.x == step_cell.x and nearest_occ.y == step_cell.y) {
 		
 	} else {
+    if (oPlayer.selected_character == id) {
+			audio_play_sound(soundStep, 11, false)
+		}
 		x = step_cell.x
 		y = step_cell.y
 	}

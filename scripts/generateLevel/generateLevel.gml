@@ -12,6 +12,7 @@ function generateLevel(level){
 	var rowAmount = irandom_range(levelDims[0], levelDims[1])
 	var colAmount = irandom_range(levelDims[2], levelDims[3])
 	makeCells(rowAmount,colAmount)
+	levelDims = [colAmount, rowAmount]
 	//Generate Rooms
 	generateChambers(level, [colAmount, rowAmount])
 	//Generate Monsters
@@ -22,6 +23,8 @@ function generateLevel(level){
 	//Relocate Characters
 	characterRelication(levelDims)
 	StrangerSpawning(levelDims, level)
+	//Make Door
+	DoorSpawning(levelDims)
 	//Increment Level
 	level++
 	//Return Dims

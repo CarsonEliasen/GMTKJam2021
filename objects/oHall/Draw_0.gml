@@ -1,2 +1,2 @@
 
-drawBlockText("O", c_red)
+drawBlockText("H", c_fuchsia)

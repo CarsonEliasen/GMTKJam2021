@@ -17,6 +17,8 @@ function makeCells(width, height){
 				wall.edge = false	
 			}
 			array_push(cell.contains, wall)
+			//Create Fog
+			instance_create_depth(posX, posY, depth-1, oFog)	
 		}
 	}
 }
