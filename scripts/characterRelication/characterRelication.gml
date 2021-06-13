@@ -14,5 +14,6 @@ function characterRelication(levelDims){
 			oPlayer.party[member].x = spawnX
 			oPlayer.party[member].y = spawnY
 			oPlayer.party[member].move_queue = ds_queue_create()
+			oPlayer.party[member].hp = oPlayer.party[member].hp + 1
 		}
 }
