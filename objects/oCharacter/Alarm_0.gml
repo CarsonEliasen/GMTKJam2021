@@ -4,7 +4,7 @@ if (recruit_target != noone) {
 	var dist_x = abs(x - recruit_target.x)
 	var dist_y = abs(y - recruit_target.y)
 	if (dist_x <= cell_size and dist_y <= cell_size) {
-		character_recruit(id, recruit_target)
+		character_recruit(id)
 	} else {
 		var recruit_target_cell = instance_nearest(recruit_target.x, recruit_target.y, oCell)
 		if (recruit_target_cell != move_target_cell) {
@@ -17,7 +17,7 @@ if (attack_target != noone) {
 	var dist_x = abs(x - attack_target.x)
 	var dist_y = abs(y - attack_target.y)
 	if (dist_x <= cell_size and dist_y <= cell_size) {
-		character_attack(id, attack_target)
+		character_attack(id)
 	} else {
 		var attack_target_cell = instance_nearest(attack_target.x, attack_target.y, oCell)
 		if (attack_target_cell != move_target_cell) {

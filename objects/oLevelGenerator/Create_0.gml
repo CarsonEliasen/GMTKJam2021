@@ -1,7 +1,7 @@
 monsters = [oOrc,
 			oTroll]
 craftingStations = [oAlchemy,
-					oAlter,
+					oAltar,
 					oArmory,
 					oForge,
 					oSpellDesk]

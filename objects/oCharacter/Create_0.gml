@@ -1,10 +1,15 @@
 // character attributes
+randomize()
 agility = irandom_range(1, 10)
 intelligence = irandom_range(1, 10)
 strength = irandom_range(1, 10)
 damage = 1
 // combat state
-current_health = strength
+hp = strength
+magic_slot = noone
+weapon_slot = noone
+armor_slot = noone
+consumable_slot = noone
 // control state
 character_id = 0
 is_selected = false

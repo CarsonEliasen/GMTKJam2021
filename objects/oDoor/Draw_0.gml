@@ -1,1 +1,1 @@
-drawBlockText("[]", c_orange)
+drawBlockText("[ ]", c_orange)

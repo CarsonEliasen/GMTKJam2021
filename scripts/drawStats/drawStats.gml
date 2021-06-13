@@ -17,9 +17,9 @@ function drawStats(member, i, startX, startY, barWidth){
 	draw_set_halign(fa_left)
 	draw_set_valign(fa_middle)
 	draw_text(startX, startY-16, name)
-	var str = 10
-	var agl = 15
-	var int = 5
+	var str = member.strength
+	var agl = member.agility
+	var int = member.intelligence
 	draw_set_color(c_red)
 	draw_text(startX+string_width(name)*2, startY-16, str)
 	draw_set_color(c_lime)
