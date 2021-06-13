@@ -5,7 +5,7 @@ var dist_y = abs(y - nearest_character.y)
 if (dist_x <= cell_size and dist_y <= cell_size) {
 	// attack
 	audio_play_sound(soundHitHurt, 11, false)
-	nearest_character.hp -= dmg
+	nearest_character.hp -= dmg - nearest_character.defense
 }
 new_x = x + sign(xTo - x) * cellHeight
 new_y = y + sign(yTo - y) * cellHeight

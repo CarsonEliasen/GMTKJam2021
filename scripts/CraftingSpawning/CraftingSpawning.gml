@@ -1,7 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function CraftingSpawning(levelDims){
-	var numStations = irandom_range(0, 1.5 * (level-1))
+	var numStations = irandom_range(0, (1 / 3) * level)
 	//var numStations = irandom_range(1, 1.5 * (level+1))
 	while(numStations > 0){
 		var cellH = sprite_get_height(sCell)
