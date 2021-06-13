@@ -6,5 +6,6 @@ damageIncrease = 1
 dmg = baseDamage
 baseXP = 10
 XPIncrease = 1
+xp = baseXP
 
 event_inherited()

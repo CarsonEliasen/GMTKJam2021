@@ -26,26 +26,30 @@ function find_path(start_cell, target_cell){
 				if (deltax == 0 and deltay == 0) {
 					continue
 				}
+				// if the x movement and y movement are both non-zero, that's diagonal; continue
+				if (deltax != 0 and deltay != 0) {
+					continue
+				}
 				// the cell to search is the cell nearest the calculated x and y
 				var search_cell = instance_nearest(search_x, search_y, oCell)
-				show_debug_message(string(search_cell) + " " + string(target_cell))
 				// if the search cell is in the list of discovered cells, skip it
 				if (ds_list_find_index(search_discovered, search_cell) != -1) {
 					continue
 				}
 				// add this search cell to the list of discovered cells
 				ds_list_add(search_discovered, search_cell)
-				// if there is a wall at the search location, skip it
-				if (position_meeting(search_x, search_y, oCellOccupier)) {
-					continue
-				}
 				// add this search cell to a new path
 				var new_path = ds_list_create()
 				ds_list_copy(new_path, current_path)
 				ds_list_add(new_path, search_cell)
 				// if the search cell is the target cell, we're done!
 				if (search_cell == target_cell) {
+					show_debug_message("found path")
 					return new_path
+				}
+				// if there is a wall at the search location, skip it
+				if (position_meeting(search_x, search_y, oCellOccupier)) {
+					continue
 				}
 				// otherwise, queue the new path and continue searching
 				ds_queue_enqueue(search_queue, new_path)
