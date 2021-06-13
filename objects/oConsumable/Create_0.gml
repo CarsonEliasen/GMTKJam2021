@@ -1,0 +1,1 @@
+hp_restore = 0
