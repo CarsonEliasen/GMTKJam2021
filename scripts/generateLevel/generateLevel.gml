@@ -13,7 +13,7 @@ function generateLevel(level){
 	//var colAmount = irandom_range(levelDims[2], levelDims[3])
 	var rowAmount = 32
 	var colAmount = 32
-	makeCells(rowAmount,colAmount)
+	makeCells(rowAmount,colAmount, true)
 	levelDims = [colAmount, rowAmount]
 	//Generate Rooms
 	generateChambers(level, [colAmount, rowAmount])

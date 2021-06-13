@@ -9,7 +9,9 @@ function MonsterSpawning(levelDims){
 		var monsterSpawn = monsters[irandom(array_length(monsters)-1)];
 		var nearWall = instance_nearest(spawnX, spawnY, oWall)
 		if(nearWall.x != spawnX and nearWall.y != spawnY){
-			instance_create_depth(spawnX, spawnY, depth, monsterSpawn)
+			var monster = instance_create_depth(spawnX, spawnY, depth, monsterSpawn)
+			var xpGain = monster.baseXP + monster.XPIncrease * level
+			monster.xp += irandom_range(xpGain * .8, xpGain * 1.2)
 			numMonsters--
 		}
 	}

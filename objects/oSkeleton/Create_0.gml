@@ -1,13 +1,13 @@
 baseHealth = 1
-healthIncrease = 1.5
+healthIncrease = 1
 hp = baseHealth
-baseDamage = 2
-damageIncrease = .5
+baseDamage = 1
+damageIncrease = 2
 dmg = baseDamage
-baseXP = 5
-XPIncrease = 3
+baseXP = 10
+XPIncrease = 1
 xp = baseXP
-alarmTime = 3
+alarmTime = 2
 alarm[0] = alarmTime * room_speed
 
 event_inherited()
