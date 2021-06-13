@@ -10,3 +10,4 @@ if (distance_to_object(nearest_character) < aggro_range) {
 	xTo = x
 	yTo = y
 }
+
