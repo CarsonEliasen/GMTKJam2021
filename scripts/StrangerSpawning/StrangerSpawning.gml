@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function StrangerSpawning(levelDims, level){
 	var spawnStranger = irandom(99)
-	if(level mod 3 == 0){
+	if(level mod 3 == 0 or level == 1){
 		spawnStranger = 0	
 	}
 	if(spawnStranger == 0){

@@ -20,4 +20,6 @@ instance_create_depth(room_width/2, room_height/2, depth-1, oButtonStartGame)
 var spacing = oButtonStartGame.height * 1.25
 instance_create_depth(room_width/2, room_height/2 + spacing, depth-1, oButtonTutorial)
 instance_create_depth(room_width/2, room_height/2 + spacing*2, depth-1, oButtonQuit)
-instance_create_depth(x,y, depth, oJukeBox)
+if(!instance_exists(oJukeBox)){
+	instance_create_depth(x,y, depth, oJukeBox)
+}

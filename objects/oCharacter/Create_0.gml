@@ -17,6 +17,9 @@ armor_slot = noone
 buff_slot = noone
 consumable_slot = noone
 currSpellCD = 0
+spellExpandRate = 4
+currSpellRadius = 0
+drawSpell = false
 // control state
 character_id = 0
 is_selected = false

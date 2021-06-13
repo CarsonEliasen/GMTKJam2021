@@ -21,6 +21,7 @@ if(magic_slot != noone){
 				hp -= dmg	
 			}
 		}
+		drawSpell = true
 		audio_play_sound(soundExplosion, 12, false)
 	}
 }
