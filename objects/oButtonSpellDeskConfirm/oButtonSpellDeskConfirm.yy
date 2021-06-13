@@ -5,8 +5,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oCraftingParent",
-    "path": "objects/oCraftingParent/oCraftingParent.yy",
+    "name": "oButtonCraftConfirm",
+    "path": "objects/oButtonCraftConfirm/oButtonCraftConfirm.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -21,17 +21,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
     "name": "Crafting",
-    "path": "folders/Objects/Crafting.yy",
+    "path": "folders/Objects/Buttons/Crafting.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oSpellDesk",
+  "name": "oButtonSpellDeskConfirm",
   "tags": [],
   "resourceType": "GMObject",
 }

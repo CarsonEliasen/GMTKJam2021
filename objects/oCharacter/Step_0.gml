@@ -1,3 +1,9 @@
+if (armor_slot != noone) {
+	defense = armor_slot.defense_bonus
+}
+if (weapon_slot != noone) {
+	damage = base_damage + weapon_slot.damage_bonus
+}
 if (hp > strength) {
 	hp = strength
 }

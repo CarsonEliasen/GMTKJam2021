@@ -1,0 +1,2 @@
+event_inherited()
+confirm_button_type = oButtonAltarConfirm

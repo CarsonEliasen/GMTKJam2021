@@ -7,6 +7,7 @@ party[0].character_id = 1
 party[0].agility = 3
 party[0].intelligence = 3
 party[0].strength = 3
+party[0].hp = 3
 selected_character = party[0]
 selected_character.is_selected = true
 oCamera.follow = selected_character
