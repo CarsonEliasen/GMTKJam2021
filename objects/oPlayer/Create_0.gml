@@ -13,4 +13,5 @@ party[0].base_strength = 3
 party[0].hp = 3
 selected_character = party[0]
 selected_character.is_selected = true
-oCamera.follow = selected_character
+oCamera.x = selected_character.x
+oCamera.y = selected_character.y

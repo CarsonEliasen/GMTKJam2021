@@ -4,7 +4,8 @@ var gameOver = true
 for(var i = 0; i < array_length(party); i++){
 	if(party[i] != -4){
 		gameOver = false
-		oCamera.follow = party[i]
+		oCamera.x = party[i].x
+		oCamera.y = party[i].y
 		oPlayer.selected_character = party[i]
 		break
 	}

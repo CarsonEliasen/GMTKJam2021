@@ -1,15 +1,6 @@
 depth = 200
-followDefault = oPlayer
+followDefault = noone
 follow = followDefault
-if(variable_instance_exists(oPlayer, "party")){
-	var party = oPlayer.party
-	for(var i = 0; i < array_length(party); i++){
-		var member = party[i]
-		if(member != 4){
-			follow = member	
-		}
-	}
-}
 zoomScaler = .1
 camWidth = 1920
 camHeight = 1080
