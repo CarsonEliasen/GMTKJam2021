@@ -2,7 +2,7 @@ var nearest_character = instance_nearest(x, y, oCharacter)
 var cell_size = sprite_get_height(sCell)
 var dist_x = abs(x - nearest_character.x)
 var dist_y = abs(y - nearest_character.y)
-if (dist_x + dist_y <= cell_size) {
+if (dist_x <= cell_size and dist_y <= cell_size) {
 	// attack
 	audio_play_sound(soundHitHurt, 11, false)
 	nearest_character.hp -= dmg - nearest_character.defense

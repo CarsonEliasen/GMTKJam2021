@@ -1,10 +1,10 @@
 baseHealth = 1
-healthIncrease = 1.5
+healthIncrease = 1
 hp = baseHealth
 baseDamage = 1
-damageIncrease = .5
+damageIncrease = 0.25
 dmg = baseDamage
-baseXP = 5
+baseXP = 6
 XPIncrease = 3
 xp = baseXP
 alarmTime = 3

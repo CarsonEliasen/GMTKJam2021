@@ -1,11 +1,11 @@
 baseHealth = 3
-healthIncrease = 2
+healthIncrease = 1
 hp = baseHealth
 baseDamage = 1
-damageIncrease = 1
+damageIncrease = 0.25
 dmg = baseDamage
 baseXP = 8
-XPIncrease = 2
+XPIncrease = 4
 xp = baseXP
 alarmTime = 4
 alarm[0] = alarmTime * room_speed

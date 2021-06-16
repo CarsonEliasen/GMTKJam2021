@@ -4,7 +4,8 @@ for (var i = 1; i <= 5; i++) {
 			selected_character.is_selected = false
 			selected_character = party[i - 1]
 			selected_character.is_selected = true
-			oCamera.follow = selected_character
+			oCamera.x = selected_character.x
+			oCamera.y = selected_character.y
 			audio_play_sound(soundCharSwitch, 11, false)
 		}
 	}

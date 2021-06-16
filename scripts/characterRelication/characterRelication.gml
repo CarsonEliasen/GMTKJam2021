@@ -15,5 +15,10 @@ function characterRelication(levelDims){
 			oPlayer.party[member].y = spawnY
 			oPlayer.party[member].move_queue = ds_queue_create()
 			oPlayer.party[member].hp = oPlayer.party[member].hp + 1
+			oPlayer.party[member].base_agility = oPlayer.party[member].base_agility + 1
+			oPlayer.party[member].base_intelligence = oPlayer.party[member].base_intelligence + 1
+			oPlayer.party[member].base_strength = oPlayer.party[member].base_strength + 1
 		}
+	oCamera.x = oPlayer.selected_character.x
+	oCamera.y = oPlayer.selected_character.y
 }
