@@ -10,7 +10,7 @@ if (weapon_slot != noone) {
 	damage = base_damage + weapon_slot.damage_bonus
 }
 if(magic_slot != noone){
-	if(keyboard_check_pressed(ord("W")) and currSpellCD == 0 and oPlayer.selected_character == id){
+	if(input.in[IN.spell] and currSpellCD == 0 and oPlayer.selected_character == id){
 		//Cast Spell
 		currSpellCD = magic_slot.spellCD
 		var charX = x

@@ -30,7 +30,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Monsters",
-    "path": "folders/Objects/Monsters.yy",
+    "path": "folders/Objects/Entities/Monsters.yy",
   },
   "resourceVersion": "1.0",
   "name": "oParentMonster",

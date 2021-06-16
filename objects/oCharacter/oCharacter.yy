@@ -33,8 +33,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Friendlies",
+    "path": "folders/Objects/Entities/Friendlies.yy",
   },
   "resourceVersion": "1.0",
   "name": "oCharacter",

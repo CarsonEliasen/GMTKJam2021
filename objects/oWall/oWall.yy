@@ -29,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Level Generation",
+    "path": "folders/Objects/Level Generation.yy",
   },
   "resourceVersion": "1.0",
   "name": "oWall",

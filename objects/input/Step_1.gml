@@ -1,0 +1,1 @@
+in = get_input()

@@ -1,5 +1,5 @@
 event_inherited()
 
-if(doAction or keyboard_check_released(vk_tab)){
+if(doAction or input.in[IN.confirm]){
 	room_goto_next()
 }

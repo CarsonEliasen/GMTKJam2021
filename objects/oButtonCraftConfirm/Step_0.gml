@@ -10,6 +10,6 @@ if(keyboard_check_pressed(ord("S"))){
 		essence -= 5
 	}
 }
-text = "SHIFT: " + string(essence)
+text = "TAB: " + string(essence)
 width = string_width(text) * 1.25
 height = string_height(text) * 1.25

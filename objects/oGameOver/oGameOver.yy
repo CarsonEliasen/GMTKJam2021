@@ -24,8 +24,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Behind the Scenes",
+    "path": "folders/Objects/Behind the Scenes.yy",
   },
   "resourceVersion": "1.0",
   "name": "oGameOver",

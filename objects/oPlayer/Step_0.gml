@@ -1,8 +1,8 @@
-for (var i = 1; i <= 5; i++) {
-	if (keyboard_check_released(ord(string(i)))) {
-		if (party[i - 1] != noone) {
+for (var i = 0; i < 5; i++) {
+	if (input.in[IN.one + i]) {
+		if (party[i] != noone) {
 			selected_character.is_selected = false
-			selected_character = party[i - 1]
+			selected_character = party[i]
 			selected_character.is_selected = true
 			oCamera.x = selected_character.x
 			oCamera.y = selected_character.y
@@ -10,7 +10,7 @@ for (var i = 1; i <= 5; i++) {
 		}
 	}
 }
-if (mouse_check_button_released(mb_left) and !position_meeting(oCursor.x, oCursor.y, oFog) and !position_meeting(oCursor.x, oCursor.y, oButtonMaster)) {
+if (input.in[IN.select] and !position_meeting(oCursor.x, oCursor.y, oFog) and !position_meeting(oCursor.x, oCursor.y, oButtonMaster)) {
 	var clicked_cell = instance_nearest(oCursor.x, oCursor.y, oCell)
 	var nearest_stranger = instance_nearest(clicked_cell.x, clicked_cell.y, oStrangerCharacter)
 	var nearest_monster = instance_nearest(clicked_cell.x, clicked_cell.y, oParentMonster)
@@ -35,7 +35,7 @@ if (mouse_check_button_released(mb_left) and !position_meeting(oCursor.x, oCurso
 		move_character(selected_character, clicked_cell)
 	}
 }
-if (keyboard_check_pressed(ord("Q"))) {
+if (input.in[IN.consume]) {
 	if (selected_character.consumable_slot != noone) {
 		audio_play_sound(soundBuff, 11, false)
 		selected_character.hp = selected_character.hp + selected_character.consumable_slot.hp_restore

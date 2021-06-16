@@ -15,3 +15,6 @@ selected_character = party[0]
 selected_character.is_selected = true
 oCamera.x = selected_character.x
 oCamera.y = selected_character.y
+
+//create input object
+instance_create_depth(x,y,depth,input)

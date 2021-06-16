@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Buttons",
-    "path": "folders/Objects/Buttons.yy",
+    "name": "Menu",
+    "path": "folders/Objects/Buttons/Menu.yy",
   },
   "resourceVersion": "1.0",
   "name": "oButtonStartGame",
