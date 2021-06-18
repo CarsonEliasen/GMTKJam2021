@@ -1,7 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function get_input(){
-	var inputs = array_create(10, 0)
+function get_input(inputs){
+	var inputs = array_create(12, 0)
 	//released is default for checking if a button was pressed
 	//Select
 	inputs[0] = mouse_check_button_released(mb_left)
@@ -19,6 +19,9 @@ function get_input(){
 	inputs[8] = keyboard_check_released(ord("W"))
 	//Key Confirm
 	inputs[9] = keyboard_check_released(vk_tab)
+	//Cam Zoom
+	inputs[10] = mouse_wheel_down()
+	inputs[11] = mouse_wheel_up()
 	
 	return inputs
 }

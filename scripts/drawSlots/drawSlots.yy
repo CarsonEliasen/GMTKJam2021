@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "UI",
+    "path": "folders/Scripts/Aesthetics/UI.yy",
   },
   "resourceVersion": "1.0",
-  "name": "get_input",
+  "name": "drawSlots",
   "tags": [],
   "resourceType": "GMScript",
 }

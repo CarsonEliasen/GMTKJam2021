@@ -9,5 +9,7 @@ enum IN{
 	five,
 	consume,
 	spell,
-	confirm
+	confirm,
+	zoomIn,
+	zoomOut
 }
